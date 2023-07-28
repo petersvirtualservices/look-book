@@ -1,0 +1,1441 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+:root {
+  --primary-color: #1b9c60;
+  --dark-color: #222222;
+  --light-color: #ede9e9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fb{
+  text-decoration: none !important;
+}
+
+.containerQ {
+  display: block;
+  position: relative;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  padding: 15px;
+}
+.gImg {
+  width: 120px;
+}
+
+.containerQ ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cardDel{
+  display: flex;
+  justify-content: space-between;
+}
+.delete{
+  color: rgb(147, 50, 50);
+}
+.questions {
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.containerQ .grid {
+  display: grid;
+  width: 90%;
+  margin: 2% auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.containerQ .btn {
+  padding: 0.2em 1.7em;
+  border: none;
+  border-radius: 0.1em;
+  font-size: 1.2em;
+}
+
+.containerQ .btn:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #202020;
+}
+
+.next {
+  background-color: #009688;
+  justify-self: flex-end;
+  width: auto;
+  padding: 0 12px;
+}
+
+.profileImage{
+  margin: auto;
+  width: 250px;
+}
+.prev {
+  background-color: #dfa632;
+  justify-self: flex-start;
+  width: auto;
+  padding: 0 12px;
+}
+
+.questions ul li {
+  display: block;
+  position: relative;
+  float: left;
+  
+}
+
+ul li input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label {
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.3em;
+  padding: 25px 25px 25px 80px;
+  margin:0 auto;
+  height: 30px;
+  z-index: 9;
+  justify-content: center;
+  cursor: pointer;
+  --webkit-transition: all 0.25s linear;
+}
+
+ul li:hover label {
+  color: #1e1d1d;
+}
+
+ul li .check {
+  display: block;
+  position: absolute;
+  border: 5px solid #bbb9b9;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  top: 30px;
+  left: 20px;
+  z-index: 5;
+  transition: border 0.25s linear;
+  -webkit-transition: border 0.25s linear;
+}
+
+ul li:hover .checked {
+  border: 5px solid #ffffff;
+}
+
+ul li .check::before {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+input[type="radio"]:checked ~ .check {
+  border: 5px solid var(--primary-color);
+}
+
+input[type="radio"]:checked ~ .check::before {
+  background: var(--light-color);
+}
+
+input[type="radio"]:checked ~ .text-primary {
+  color: var(--primary-color);
+}
+
+/* To get selected option we are using this checked class */
+.checked {
+  border: 5px solid var(--primary-color) !important;
+}
+
+.checked::before {
+  background: var(--primary-color);
+}
+
+.navbar-toggler {
+  width: 80px;
+}
+
+html,
+body {
+  font-family: "Aboreto", cursive;
+  font-size: 22px;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+video {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+p {
+  font-size: 18px;
+}
+
+select {
+  padding: 8px;
+  width: 100%;
+  border-radius: 20px;
+}
+.right {
+  margin-left: 90%;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.search {
+  width: 60%;
+}
+
+ul li {
+  font-size: 20px;
+}
+.subHeader {
+  background-color: #fff;
+  padding: 15px;
+}
+.btn-large {
+  margin: 5px;
+}
+.center {
+  text-align: center;
+}
+
+.addContact,
+.logout {
+  float: right;
+  border: none;
+  padding: 8px 12px;
+  width: auto;
+}
+.loggedBox {
+  margin: auto;
+}
+.link {
+  text-decoration: none;
+  color: #507cc0;
+}
+.registerSection,
+.loginSection {
+  width: 40%;
+  margin: auto;
+}
+
+.reviews div {
+  display: flex;
+  
+}
+
+.contactBox {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+}
+.homeBox {
+  width: 50%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  opacity: 0.8;
+  padding: 15px;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.galleryBox {
+  margin: 2% auto;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.contactPage {
+  background-image: url("../src/assets/backgroundcouple.jpg");
+  background-size: cover;
+}
+
+.contentBox {
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #63666a;
+  justify-content: center;
+}
+
+.formBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  background-color: #e6e6e6;
+  padding: 15px;
+}
+.contactForm {
+  width: 100%;
+  background-color: #e9eaeb;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.bio {
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  height: 400px;
+  box-shadow: 4px 4px 4px 4px grey;
+}
+.formDiv {
+  padding: 15px;
+  color: #535050;
+  margin: 8px;
+  box-shadow: 4px 4px 4px 4px grey;
+}
+.albumSection {
+  width: 148%;
+  margin-left: -32%;
+}
+
+
+.aboutUsBox,
+.accountBox,
+.albumBox {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #63666a;
+ 
+}
+.userBox{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  
+}
+.profileAccount{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.uploadSection {
+  width: 100%;
+}
+.uploadBox {
+  margin-top: -3%;
+}
+.iconItem {
+  float: right;
+}
+.albumBtn h6 {
+  background-color: #d6d4d4;
+  margin: 5px;
+  width: 50%;
+  height: 60px;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.albumsSection {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.cardAlbum {
+  margin: 5px;
+  width: 250px;
+  height: 250px;
+  display: inline-flex;
+}
+.author {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+.userMember {
+  width: 25%;
+  font-size: 15px;
+  margin: 5px;
+  text-align: left;
+  display: flex;
+}
+.userProfile {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 100%;
+}
+.linkMail {
+  font-size: 12px;
+  color: #507cc0;
+}
+.userBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userBox div {
+  margin: 5px;
+  align-items: center;
+  padding: 15px;
+}
+.loggedBox {
+  height: 50vh;
+  background-image: url("../src/assets/backgroundcouple.jpg");
+  background-size: cover;
+}
+b {
+  color: #507cc0;
+}
+.profileBox {
+  width: 80%;
+  margin: 5% auto;
+  padding: 15px;
+  justify-content: space-between;
+  display: flex;
+}
+.profileLink {
+  background: none;
+  align-items: center;
+  color: #9e9797;
+  margin-top: -5px;
+  font-size: 20px;
+}
+
+.profile {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+}
+
+input {
+  width: 100%;
+}
+
+.filterBox {
+  width: 70%;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #63666a;
+  margin-left: 15%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b3b0b0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.card-action {
+  text-align: left;
+}
+.cardPost {
+  padding: 15px;
+  width: 100%;
+}
+.tumbicon {
+  margin: 5px;
+}
+.cardContent {
+  display: flex;
+  padding: 15px;
+}
+.cardInfo {
+  margin: 5px;
+  padding: 15px;
+}
+.postImage {
+  width: 400px;
+  height: 350px;
+}
+.timePost {
+  font-size: 12px;
+  color: #b3b0b0;
+}
+
+.col {
+  padding: 15px;
+}
+.btn {
+  color: #fff !important;
+  margin: 10px !important;
+  background-color: #9e9797 !important;
+}
+.footerp {
+  font-size: medium !important;
+}
+.fa-facebook-square,
+.fa-facebook {
+  color: blue;
+}
+.fa-twitter-square,
+.fa-twitter {
+  color: skyblue;
+}
+.fa-pinterest-square {
+  color: rgb(144, 47, 47);
+}
+.fa-instagram-square {
+  color: rgb(150, 66, 35);
+}
+.fa-linkedin {
+  color: #507cc0;
+}
+.fa-dribbble {
+  color: #009688;
+}
+.time {
+  font-size: medium;
+  color: #9e9797;
+}
+.research {
+  margin-bottom: 5px !important;
+}
+.researchlink {
+  color: #507cc0 !important;
+  padding: 15px !important;
+}
+.loginButton {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+
+.google {
+  background-color: #df4930;
+}
+.facebook {
+  background-color: #507cc0;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.home {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #63666a;
+  background-color: #e6e6e6;
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 20px 0px;
+}
+
+.desc {
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
+.cardButton {
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(53, 16, 102, 0.678);
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postImage {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.postDesc {
+  padding: 0 100px;
+  font-size: 24px;
+  font-weight: 300;
+  color: gray;
+  margin-top: 50px;
+}
+
+.postLongDesc {
+  padding: 100px;
+  padding-top: 50px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.col {
+  text-align: center;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding: 15px;
+}
+
+.imgAlbum {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.imgGrid {
+  display: grid;
+  gap: 0.5rem;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+}
+a,
+a:visited {
+  color: black;
+}
+
+input,
+button,
+textarea {
+  font-family: "Facinate", sans-serif;
+  font-size: 22px;
+  padding: 0.5rem;
+  border-radius: 25px;
+  outline: #eeecec;
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: #979797 !important;
+}
+
+.MuiFilledInput-root {
+  border-bottom: 1px solid #ced1ce !important;
+}
+
+.MuiInput-root {
+  border-bottom: 1px solid #d2d4d2 !important;
+}
+.colMember {
+  display: inline-flex;
+}
+label,
+button {
+  margin-top: 0.5rem;
+}
+.submitBtn {
+  background-color: #009688;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.submitBtn:hover {
+  background: #e9ecec;
+  color: #151515;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.errmsg {
+  color: firebrick;
+  font-weight: bold;
+}
+
+.line {
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+.boxSidebar {
+  position: absolute;
+}
+.profileAccount {
+  display: flex;
+  justify-content: space-between;
+}
+.logoutVideo {
+  margin-top: 5%;
+}
+.intro {
+  font-weight: 800;
+}
+.columnMember {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  margin-left: 0;
+}
+.evaluationForm {
+  text-align: center;
+}
+.cardMember {
+  box-shadow: 0 4px 8px gray;
+  width: 50%;
+  margin: 12px;
+  padding: 1rem;
+  text-align: center;
+  font-family: arial;
+  border-radius: 12px;
+}
+.profileMember {
+  width: 250px;
+  height: 250px;
+  padding: 8px;
+  border-radius: 100%;
+}
+i {
+  margin: 5px;
+}
+.iconbtn{
+  width: auto;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.logoutSection {
+  height: 100vh;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #9e9797;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+.contactInfo {
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.fillerLocationBox img {
+  height: 100px;
+  width: 100px;
+}
+@media screen and (max-width: 1280) {
+  .right {
+    margin-left: 80%;
+  }
+}
+@media screen and (max-width: 1024) {
+  .right {
+    margin-left: 85%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .settings,
+  .settingsForm {
+    width: 100%;
+    justify-content: center;
+    width: 350px;
+    margin-left: -12%;
+  }
+  .uploadForm,
+  .col,
+  .accountBox,
+  .contactBox,
+  .searchBox,
+  .albumBox,
+  .profileBox,
+  .contentBox,
+  .filterBox {
+    margin-top: 5%;
+    width: 100%;
+    margin: auto;
+  }
+  .homeBox {
+    position: relative;
+    width: 100%;
+  }
+  .homepage {
+    width: 100%;
+    position: relative;
+  }
+  .d-flex {
+    display: block !important;
+  }
+  .container {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  .researhSection {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+  .userBox {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .accountBox {
+    width: 100%;
+    margin: 5% auto;
+  }
+  .albumBtn h6 {
+    width: 100%;
+    height: auto;
+  }
+  .cardAlbum {
+    width: 100%;
+  }
+  .formBox {
+    display: block;
+    width: 100%;
+  }
+  .profileAccount,
+  .profileBox {
+    display: block;
+    width: 100%;
+  }
+  .profileAccount div {
+    width: 100%;
+  }
+  .memberBox {
+    width: 100%;
+  }
+  .userMember {
+    width: 80%;
+    text-align: left;
+    margin: auto;
+  }
+  .searchbar {
+    width: 100%;
+  }
+  .home {
+    width: 100%;
+    display: block;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .sidebar-item {
+    float: left;
+  }
+  .columnMember {
+    display: block;
+  }
+  .cardMember {
+    width: 100%;
+  }
+  .albumSection {
+    margin: auto;
+    width: 100%;
+  }
+  .loginSection,
+  .registerSection {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+  form,
+  .social {
+    width: 100%;
+  }
+  .right {
+    margin-left: 0;
+  }
+  .cardContent {
+    display: block;
+    width: 100%;
+  }
+  .postImage {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .settings,
+  .settingsWrapper,
+  .settingsForm {
+    width: 320px;
+    margin-left: -20%;
+  }
+
+  .homeBox {
+    position: relative;
+    width: 100%;
+  }
+  .homepage {
+    width: 100%;
+    position: relative;
+  }
+  .d-flex {
+    display: block !important;
+  }
+  .link {
+    font-size: 18px;
+  }
+  .loginSection,
+  .registerSection {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+  .profileAccount,
+  .profileBox {
+    display: block;
+    width: 100%;
+  }
+  .profileAccount div {
+    width: 100%;
+  }
+  form,
+  .social {
+    width: 100%;
+  }
+  .galleryBox,
+  .uploadBox,
+  .col,
+  .homepage,
+  .contactBox,
+  .searchBox,
+  .albumBox,
+  .profileBox,
+  .contentBox,
+  .filterBox {
+    margin-top: 5%;
+    width: 100%;
+    margin: auto;
+  }
+  .container {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  .gallerySection {
+    width: 100%;
+    margin-left: -5%;
+  }
+  .userBox {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .multipleFile {
+    width: 100%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .accountBox {
+    width: 100%;
+    margin: 5% auto;
+  }
+  .memberBox {
+    width: 100%;
+  }
+  .userMember {
+    width: 80%;
+    text-align: left;
+  }
+  .profileBox {
+    display: block;
+  }
+  .formBox {
+    display: block;
+    width: 100%;
+  }
+  .cardContent {
+    display: block;
+    width: 100%;
+  }
+  .searchbar {
+    width: 100%;
+  }
+  .home {
+    width: 100%;
+    display: block;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .sidebar-item {
+    float: left;
+  }
+  .columnMember {
+    display: block;
+  }
+  .cardMember {
+    width: 100%;
+  }
+  .albumSection {
+    margin: auto;
+    width: 100%;
+  }
+  .right {
+    margin-left: 0;
+  }
+  .postImage {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 390px) {
+  .settings,
+  .settingsWrapper,
+  .settingsForm {
+    width: 280px;
+    margin-left: -20%;
+  }
+
+  .homeBox {
+    position: relative;
+    width: 100%;
+  }
+  .homepage {
+    width: 100%;
+    position: relative;
+  }
+  .d-flex {
+    display: block !important;
+  }
+  .profileAccount,
+  .profileBox {
+    display: block;
+    width: 100%;
+  }
+  .profileAccount div {
+    width: 100%;
+  }
+  .link {
+    font-size: 18px;
+  }
+  .loginSection,
+  .registerSection {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+  .cardContent {
+    display: block;
+    width: 100%;
+  }
+  form,
+  .social {
+    width: 100%;
+  }
+
+  .galleryBox,
+  .uploadBox,
+  .col,
+  .homepage,
+  .contactBox,
+  .searchBox,
+  .albumBox,
+  .profileBox,
+  .contentBox,
+  .filterBox {
+    margin-top: 5%;
+    width: 100%;
+    margin: auto;
+  }
+  .container {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  h2 {
+    font-size: 22px;
+  }
+
+  .gallerySection {
+    width: 100%;
+    margin-left: -8%;
+  }
+  .memberBox {
+    width: 100%;
+  }
+  .userMember {
+    width: 80%;
+    text-align: left;
+  }
+  .userBox {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .accountBox {
+    width: 100%;
+    margin: 5% auto;
+  }
+  .filesBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .formBox {
+    display: block;
+    width: 100%;
+  }
+  .profileBox {
+    display: block;
+  }
+  .searchbar {
+    width: 100%;
+  }
+  .home {
+    width: 100%;
+    display: block;
+  }
+  .card {
+    width: 100%;
+  }
+  .columnMember {
+    display: block;
+  }
+  .cardMember {
+    width: 100%;
+  }
+
+  .cardPost {
+    width: 100%;
+  }
+  .right {
+    margin-left: 0;
+  }
+  .postImage {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .settings,
+  .settingsWrapper,
+  .settingsForm {
+    width: 280px;
+    margin-left: -23%;
+    justify-content: center;
+  }
+  .homeBox {
+    position: relative;
+    width: 100%;
+  }
+  .homepage {
+    width: 100%;
+    position: relative;
+  }
+  .d-flex {
+    display: block !important;
+  }
+  .profileAccount,
+  .profileBox {
+    display: block;
+    width: 100%;
+  }
+  .profileAccount div {
+    width: 100%;
+  }
+  .link {
+    font-size: 18px;
+  }
+  .loginSection,
+  .registerSection {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+  .cardContent {
+    display: block;
+    width: 100%;
+  }
+  form,
+  .social {
+    width: 100%;
+  }
+  .galleryBox,
+  .uploadBox,
+  .col,
+  .homepage,
+  .contactBox,
+  .searchBox,
+  .albumBox,
+  .profileBox,
+  .contentBox,
+  .filterBox {
+    margin-top: 5%;
+    width: 100%;
+    margin: auto;
+  }
+  .container {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  .gallerySection {
+    width: 100%;
+    margin-left: -14%;
+  }
+  .memberBox {
+    width: 100%;
+  }
+  .userMember {
+    width: 80%;
+    text-align: left;
+  }
+  .userBox {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .multipleFile {
+    width: 100%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+
+  .accountBox {
+    width: 100%;
+    margin: 5% auto;
+  }
+  .filesBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .formBox {
+    display: block;
+    width: 100%;
+  }
+  .profileBox {
+    display: block;
+  }
+  .searchbar {
+    width: 100%;
+  }
+  .home {
+    width: 100%;
+    display: block;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .sidebar-item {
+    float: left;
+  }
+  .columnMember {
+    display: block;
+  }
+  .cardMember {
+    width: 100%;
+  }
+  .albumSection {
+    margin: auto;
+    width: 100%;
+  }
+  .right {
+    margin-left: 0;
+  }
+  .postImage {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+/*
+
+:root {
+  --text-color: #333;
+  --accent-color: rgb(37, 126, 96);
+  --btn-text-color: #f9f9f9;
+  --alert-success-bg-color: #d4edda;
+  --alert-success-text-color: #155724;
+  --alert-danger-bg-color: #f5c6cb;
+  --alert-danger-text-color: #721c24;
+}
+* {
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+img {
+  border-radius: 5px;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--btn-text-color);
+  border-radius: 5px;
+  transition: 250ms;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+}
+
+.btn:hover {
+  border: 1px solid var(--accent-color);
+  background-color: var(--btn-text-color);
+  color: var(--acent-color);
+}
+
+.form {
+  margin-bottom: 10px;
+}
+
+.form-input {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.alert {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  position: fixed;
+  top: 2rem;
+  right: 0rem;
+  min-width: 200px;
+}
+
+.alert-success {
+  background-color: var(--alert-success-bg-color);
+  color: var(--alert-success-text-color);
+}
+
+.alert-danger {
+  background-color: var(--alert-danger-bg-color);
+  color: var(--alert-danger-text-color);
+}
+*/
